@@ -41,7 +41,24 @@
         <h1>Json Assignment</h1>
         <p id ="main"></p>
     </div>
-
+    <div>
+        <form id="forms">
+        <input id="fnames" type="text" placeholder="Fname" required>
+        <input id="lnames" type="text" placeholder="Fname" required>
+        <input id="dob" type="text" placeholder="DOB seperated with /" required>
+        <button type="button" onclick="add()"> submit</button>
+        </form>
+    </div><br>
+    <div>
+        <table id="tab">
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Date of Borth</th>
+            </tr>
+        </table>
+          
+    </div>
     <script>
         const Person1 = {
             "Firstname":"John",
@@ -76,48 +93,16 @@
             "DOB":"27/5/1995"
         }]
 
-        // $("#demo").html(`<h1> Json Data in table format </h1><table>
-        //     <tr>
-        //         <th>First Name</th>
-        //         <th>Last Name</th>
-        //         <th>Date of Birth</th>
-        //     </tr>
-        //     <tr>
-        //         <td>${Person2[0].Firstname}</td>
-        //         <td>${Person2[0].Lastname}</td>
-        //         <td>${Person2[0].DOB}</td>
-        //     </tr>
-        //     <tr>
-        //         <td>${Person2[1].Firstname}</td>
-        //         <td>${Person2[1].Lastname}</td>
-        //         <td>${Person2[1].DOB}</td>
-        //     </tr>
-        //     <tr>
-        //         <td>${Person2[2].Firstname}</td>
-        //         <td>${Person2[2].Lastname}</td>
-        //         <td>${Person2[2].DOB}</td>
-        //     </tr>
-        //     <tr>
-        //         <td>${Person2[3].Firstname}</td>
-        //         <td>${Person2[3].Lastname}</td>
-        //         <td>${Person2[3].DOB}</td>
-        //     </tr>
-        //     <tr>
-        //         <td>${Person2[4].Firstname}</td>
-        //         <td>${Person2[4].Lastname}</td>
-        //         <td>${Person2[4].DOB}</td>
-        //     </tr>
-        // </table>`)
-        document.write("Fname  Lname DOB <br>")
-        for (let i = 0; i<Person2.length;i++){
-            
-            document.write(`<table><tr>
-                <td>${Person2[i].Firstname}</td>
-                <td>${Person2[i].Lastname}</td>
-                <td>${Person2[i].DOB}</td><br>
-            </tr> </table>`)
+       
+        for (let i = 0; i<Person2.length; i++){
+        document.getElementById('tab').innerHTML += ` <tr><td>${Person2[i].Firstname}</td><td>${Person2[i].Lastname}</td><td>${Person2[i].DOB}</td><br></tr> `;
         }
-
+        function add(){
+        var first = document.getElementById("fnames").value;
+        var secnd = document.getElementById("lnames").value;
+        var dt = document.getElementById("dob").value;
+        document.getElementById('tab').innerHTML += ` <tr><td>${first}</td><td>${secnd}</td><td>${dt}</td><br></tr> `;
+        } 
     </script>
 </body>
 </htmOB
