@@ -31,6 +31,9 @@
             border:1px solid black;
             background-color: rgb(245, 120, 120);
         }
+        table,td{
+            padding:5px;
+        }
     </style>
 </head>
 <body>
@@ -39,9 +42,6 @@
         <p id ="main"></p>
     </div>
 
-    <div id="demo">
-        
-    </div>
     <script>
         const Person1 = {
             "Firstname":"John",
@@ -53,61 +53,70 @@
         const Person2 = [{
             "Firstname":"John",
             "Lastname":"Doe",
-            "DOB":"27/5/995"
+            "DOB":"27/5/1990"
         },
         {
-            "Firstname":"John",
-            "Lastname":"Doe",
-            "DOB":"27/5/995"
+            "Firstname":"Jack",
+            "Lastname":"Oggy",
+            "DOB":"27/5/1993"
         },
         {
-            "Firstname":"John",
-            "Lastname":"Doe",
-            "DOB":"27/5/995"
+            "Firstname":"Brad",
+            "Lastname":"Pitt",
+            "DOB":"27/5/1985"
         },
         {
-            "Firstname":"John",
-            "Lastname":"Doe",
-            "DOB":"27/5/995"
+            "Firstname":"Kaur",
+            "Lastname":"Kur",
+            "DOB":"27/5/1998"
         },
         {
-            "Firstname":"John",
-            "Lastname":"Doe",
-            "DOB":"27/5/995"
+            "Firstname":"joe",
+            "Lastname":"Brown",
+            "DOB":"27/5/1995"
         }]
 
-        $("#demo").html(`<h1> Json Data in table format </h1><table>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Date of Birth</th>
-            </tr>
-            <tr>
-                <td>${Person2[0].Firstname}</td>
-                <td>${Person2[0].Lastname}</td>
-                <td>${Person2[0].DOB}</td>
-            </tr>
-            <tr>
-                <td>${Person2[1].Firstname}</td>
-                <td>${Person2[1].Lastname}</td>
-                <td>${Person2[1].DOB}</td>
-            </tr>
-            <tr>
-                <td>${Person2[2].Firstname}</td>
-                <td>${Person2[2].Lastname}</td>
-                <td>${Person2[2].DOB}</td>
-            </tr>
-            <tr>
-                <td>${Person2[3].Firstname}</td>
-                <td>${Person2[3].Lastname}</td>
-                <td>${Person2[3].DOB}</td>
-            </tr>
-            <tr>
-                <td>${Person2[4].Firstname}</td>
-                <td>${Person2[4].Lastname}</td>
-                <td>${Person2[4].DOB}</td>
-            </tr>
-        </table>`)
+        // $("#demo").html(`<h1> Json Data in table format </h1><table>
+        //     <tr>
+        //         <th>First Name</th>
+        //         <th>Last Name</th>
+        //         <th>Date of Birth</th>
+        //     </tr>
+        //     <tr>
+        //         <td>${Person2[0].Firstname}</td>
+        //         <td>${Person2[0].Lastname}</td>
+        //         <td>${Person2[0].DOB}</td>
+        //     </tr>
+        //     <tr>
+        //         <td>${Person2[1].Firstname}</td>
+        //         <td>${Person2[1].Lastname}</td>
+        //         <td>${Person2[1].DOB}</td>
+        //     </tr>
+        //     <tr>
+        //         <td>${Person2[2].Firstname}</td>
+        //         <td>${Person2[2].Lastname}</td>
+        //         <td>${Person2[2].DOB}</td>
+        //     </tr>
+        //     <tr>
+        //         <td>${Person2[3].Firstname}</td>
+        //         <td>${Person2[3].Lastname}</td>
+        //         <td>${Person2[3].DOB}</td>
+        //     </tr>
+        //     <tr>
+        //         <td>${Person2[4].Firstname}</td>
+        //         <td>${Person2[4].Lastname}</td>
+        //         <td>${Person2[4].DOB}</td>
+        //     </tr>
+        // </table>`)
+        document.write("Fname  Lname DOB <br>")
+        for (let i = 0; i<Person2.length;i++){
+            
+            document.write(`<table><tr>
+                <td>${Person2[i].Firstname}</td>
+                <td>${Person2[i].Lastname}</td>
+                <td>${Person2[i].DOB}</td><br>
+            </tr> </table>`)
+        }
 
     </script>
 </body>
