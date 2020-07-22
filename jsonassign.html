@@ -28,10 +28,10 @@
     </style>
 </head>
 <body>
-    <!-- <div class="wrap">
+    <div class="wrap">
         <h1>Json Assignment</h1>
         <p id ="main"></p>
-    </div> -->
+    </div>
     <div>
         <form id="forms">
         <input id="fnames" type="text" placeholder="Fname" required>
@@ -57,13 +57,13 @@
     </div>
     <div class="pd-filter-pagination" data-pagination="5"></div>
     <script>
-        // const Person1 = {
-        //     "Firstname":"John",
-        //     "Lastname":"Doe",
-        //     "DOB":"27/5/995"
-        // }
+        const Person1 = {
+            "Firstname":"John",
+            "Lastname":"Doe",
+            "DOB":"27/5/995"
+        }
 
-        // $("#main").html(`<h2>First Name = ${Person1.Firstname}<br> Last Name = ${Person1.Lastname}<br> Date of Birth = ${Person1.DOB}</h2>`)
+        $("#main").html(`<h2>First Name = ${Person1.Firstname}<br> Last Name = ${Person1.Lastname}<br> Date of Birth = ${Person1.DOB}</h2>`)
         const Person2 = [{
             "Firstname":"John",
             "Lastname":"Doe",
